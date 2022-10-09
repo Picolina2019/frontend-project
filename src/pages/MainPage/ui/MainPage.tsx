@@ -1,5 +1,4 @@
 import React from 'react';
-const MainPage = () => {
-  return <span>HHEHHEHEHHELLLLOOO</span>;
-};
+
+const MainPage = () => <span>HHEHHEHEHHELLLLOOO</span>;
 export default MainPage;
