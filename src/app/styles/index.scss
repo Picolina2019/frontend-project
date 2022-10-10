@@ -1,22 +1,25 @@
-@import 'reset.scss';
-@import 'variables/globals';
-@import 'themes/normal';
-@import 'themes/dark';
+@import "reset";
+@import "variables/globals";
+@import "themes/normal";
+@import "themes/dark";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 .app {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
 }
+
 .contentPage {
   display: flex;
 }
+
 .pageWrapper {
   flex-grow: 1;
   padding: 20px;
