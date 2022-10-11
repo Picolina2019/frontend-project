@@ -1,5 +1,5 @@
 import './styles/index.scss';
-import '../index.scss';
+
 import { Navbar } from 'widgets/Navbar';
 
 import { Sidebar } from 'widgets/Sidebar';
@@ -36,7 +36,7 @@ export const App = () => {
         <Navbar />
         <Component />
 
-        <div className="contentPage">
+        <div className='contentPage'>
           <Sidebar />
           <AppRouter />
         </div>
