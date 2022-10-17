@@ -1,4 +1,7 @@
 {
   "hello": "hello",
-  "translate": "translate"
+  "translate": "translate",
+  "Page is not found": "page is not found",
+  "main page": "main page\n",
+  "secondary page": "secondary page"
 }

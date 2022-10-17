@@ -1,4 +1,7 @@
 {
   "hello": "hej",
-  "translate": "översätt"
+  "translate": "översätt",
+  "Page is not found": "sidan hittades inte",
+  "main page": "första sida",
+  "secondary page": "andra sida"
 }
