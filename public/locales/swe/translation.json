@@ -3,5 +3,8 @@
   "translate": "översätt",
   "Page is not found": "sidan hittades inte",
   "main page": "första sida",
-  "secondary page": "andra sida"
+  "secondary page": "andra sida",
+  "Something went wrong": "Nagot gick fel",
+  "Refresh page": "Uppdatera sida",
+  "error": "fel"
 }

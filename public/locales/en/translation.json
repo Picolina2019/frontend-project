@@ -3,5 +3,8 @@
   "translate": "translate",
   "Page is not found": "page is not found",
   "main page": "main page\n",
-  "secondary page": "secondary page"
+  "secondary page": "secondary page",
+  "Something went wrong": "Something went wrong",
+  "Refresh page": "Refresh page",
+  "error": "error"
 }
