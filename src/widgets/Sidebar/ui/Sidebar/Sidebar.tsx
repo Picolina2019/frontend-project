@@ -1,3 +1,4 @@
+/* eslint-disable i18next/no-literal-string */
 import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames';
 import { Button } from 'shared/ui/Button/Button';
@@ -16,10 +17,11 @@ export const Sidebar = ({ className }: SidebarProps) => {
   };
   return (
     <div
-      data-testid='sidebar'
+      data-testid="sidebar"
       className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
         className,
-      ])}>
+      ])}
+    >
       <Button data-testid="sidebar-toggle" onClick={onToggle}>
         toggle
       </Button>
