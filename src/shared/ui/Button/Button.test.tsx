@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
-import { Button, ThemeButton } from './Button';
+import { Button, ButtonTheme } from './Button';
 
 describe('Button ', () => {
   test('render with text', () => {
@@ -10,7 +10,7 @@ describe('Button ', () => {
   });
   test('render Button with  class clear', () => {
     // eslint-disable-next-line i18next/no-literal-string
-    render(<Button theme={ThemeButton.CLEAR}>TEXT</Button>);
+    render(<Button theme={ButtonTheme.CLEAR}>TEXT</Button>);
     expect(screen.getByText('TEXT')).toHaveClass('clear');
     screen.debug();
   });

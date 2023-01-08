@@ -1,7 +1,7 @@
 /* eslint-disable i18next/no-literal-string */
 import { useState } from 'react';
 import { classNames } from 'shared/lib/classNames';
-import { Button } from 'shared/ui/Button/Button';
+import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LandSwitcher';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import styles from './Sidebar.module.scss';
@@ -17,13 +17,18 @@ export const Sidebar = ({ className }: SidebarProps) => {
   };
   return (
     <div
-      data-testid="sidebar"
+      data-testid='sidebar'
       className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
         className,
-      ])}
-    >
-      <Button data-testid="sidebar-toggle" onClick={onToggle}>
-        toggle
+      ])}>
+      <Button
+        data-testid='sidebar-toggle'
+        onClick={onToggle}
+        className={styles.collapsedBtn}
+        theme={ButtonTheme.BACKGROUND_INVERTED}
+        size={ButtonSize.L}
+        square>
+        {collapsed ? '>' : '<'}
       </Button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
