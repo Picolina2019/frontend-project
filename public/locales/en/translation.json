@@ -6,5 +6,8 @@
   "secondary page": "secondary page",
   "Something went wrong": "Something went wrong",
   "Refresh page": "Refresh page",
-  "error": "error"
+  "error": "error",
+  "short language": "en",
+  "about": "ABOUT",
+  "main": "MAIN"
 }

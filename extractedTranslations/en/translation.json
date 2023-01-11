@@ -1,12 +1,16 @@
 {
+  "": "",
   "Page is not found": "Page is not found",
   "Refresh page": "Refresh page",
   "Something went wrong": "Something went wrong",
+  "about": "about",
   "error": "error",
   "hello": "hello",
+  "main": "main",
   "main page": "main page",
   "s": "s",
   "secondary page": "secondary page",
+  "short language": "short language",
   "translate": "translate",
   "Главная страница": "Главная страница"
 }
