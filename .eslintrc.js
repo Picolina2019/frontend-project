@@ -18,7 +18,7 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint'],
+  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -44,6 +44,13 @@ module.exports = {
         ignoreAttribute: ['data-testid', 'to'],
       },
     ],
+    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
+    'react-hooks/exhaustive-deps': 'error',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'object-curly-newline': 'off',
+    'react/button-has-type': 'off',
+    'react/jsx-closing-bracket-location': 'off',
     'max-len': [
       'error',
       {
