@@ -51,6 +51,7 @@ module.exports = {
     'object-curly-newline': 'off',
     'react/button-has-type': 'off',
     'react/jsx-closing-bracket-location': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'max-len': [
       'error',
       {
@@ -58,6 +59,7 @@ module.exports = {
         code: 120,
       },
     ],
+    'no-param-reassign': 'off',
   },
   globals: {
     __IS_DEV__: true,

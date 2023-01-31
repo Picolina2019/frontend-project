@@ -9,14 +9,12 @@ import { classNames } from '../shared/lib/classNames';
 export const App = () => {
   const { theme } = useTheme();
 
-
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback=''>
+      <Suspense fallback="">
         <Navbar />
-     
 
-        <div className='contentPage'>
+        <div className="contentPage">
           <Sidebar />
           <AppRouter />
         </div>

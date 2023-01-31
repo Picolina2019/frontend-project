@@ -7,7 +7,9 @@ import path from 'path';
 
 export default {
   clearMocks: true,
-
+  globals: {
+    __IS_DEV__: true,
+  },
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: ['/node_modules/'],
 
