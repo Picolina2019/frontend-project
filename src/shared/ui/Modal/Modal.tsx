@@ -1,3 +1,5 @@
+import { useTheme } from 'app/providers/ThemeProvider';
+
 import React, {
   ReactNode,
   useCallback,
@@ -58,14 +60,14 @@ export const Modal = ({ className, children, isOpen, onClose }: ModalProps) => {
   };
 
   return (
-    // <Portal>
-    <div className={classNames(styles.Modal, mods, [className])}>
-      <div className={styles.overlay} onClick={closeHandler}>
-        <div className={styles.content} onClick={onContentClick}>
-          {children}
+    <Portal>
+      <div className={classNames(styles.Modal, mods, [className])}>
+        <div className={styles.overlay} onClick={closeHandler}>
+          <div className={styles.content} onClick={onContentClick}>
+            {children}
+          </div>
         </div>
       </div>
-    </div>
-    // </Portal>
+    </Portal>
   );
 };
