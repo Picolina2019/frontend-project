@@ -1,9 +1,8 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import { Counter } from 'entities/Counter';
 
-const AboutPage = () => {
-  const { t } = useTranslation();
-
-  return <div>{t('secondary page')}</div>;
-};
+const AboutPage = () => (
+  <div>
+    <Counter />
+  </div>
+);
 export default AboutPage;

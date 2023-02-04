@@ -9,5 +9,8 @@
   "error": "fel",
   "short language": "swe",
   "about": "OM SIDA",
-  "main": "HUVUD"
+  "main": "HUVUD",
+  "Enter": "Logga in",
+  "Login": "Namnet",
+  "Password": "Koden"
 }

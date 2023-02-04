@@ -10,5 +10,7 @@
   "short language": "en",
   "about": "ABOUT",
   "main": "MAIN",
-  "Enter": "Enter"
+  "Enter": "Enter",
+  "Login": "Login",
+  "Password": "Password"
 }
