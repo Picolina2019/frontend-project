@@ -49,6 +49,7 @@ export const Input = ({
         type={type}
         value={value}
         onChange={onChangeHandler}
+        // eslint-disable-next-line jsx-a11y/no-autofocus
         autoFocus={isFocused}
         {...otherProps}
       />

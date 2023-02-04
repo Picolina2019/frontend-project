@@ -15,7 +15,8 @@ const MainPage = () => {
 
       <Input
         autoFocus
-        placeholder='Enter message'
+        // eslint-disable-next-line i18next/no-literal-string
+        placeholder="Enter message"
         onChange={valueOnChange}
         value={value}
       />

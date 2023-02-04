@@ -16,10 +16,10 @@ export const LoginForm = ({ className }: LoginFormProps) => {
       <Input
         autoFocus
         placeholder={t('Login')}
-        type='text'
+        type="text"
         className={styles.input}
       />
-      <Input placeholder={t('Password')} type='text' className={styles.input} />
+      <Input placeholder={t('Password')} type="text" className={styles.input} />
       <Button className={styles.btn}>{t('Enter')}</Button>
     </div>
   );
