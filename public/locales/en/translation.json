@@ -10,7 +10,11 @@
   "short language": "en",
   "about": "ABOUT",
   "main": "MAIN",
-  "Enter": "Enter",
+  "Enter": "Login",
   "Login": "Login",
-  "Password": "Password"
+  "Password": "Password",
+  "Authorisation form": "Authorisation form",
+  "User enters wrong username or password": "Wrong username or password",
+  "Wrong username or password": "Wrong username or password",
+  "Logout": "Logout"
 }

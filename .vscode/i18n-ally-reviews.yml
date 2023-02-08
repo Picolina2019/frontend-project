@@ -25,3 +25,63 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-02-04T17:59:07.785Z'
+  Authorisation form:
+    locales:
+      swe:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: QGDhUf3uhfXB5d_pSNAeH
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-06T21:14:24.111Z'
+  User enters wrong username or password:
+    locales:
+      swe:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: k72oPK_GrvSEsJIEGm5i6
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-06T21:31:55.419Z'
+  Wrong username or password:
+    locales:
+      swe:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: Xdu-ogTphY8_-LHbJgP1c
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-06T21:33:44.596Z'
+  Logout:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: uNfxoFwMfU9Z4-0d6_e96
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-06T22:26:11.755Z'
+  Enter:
+    locales:
+      en:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: EJA9XOxb7zqMVr6pRDKaa
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-06T22:32:00.237Z'

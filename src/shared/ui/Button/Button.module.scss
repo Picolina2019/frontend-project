@@ -42,7 +42,7 @@
 .square.size_l {
   width: var(--font-line-l);
   height: var(--font-line-l);
-  
+
 }
 
 .square.size_xl {
@@ -61,4 +61,8 @@
 
 .size_xl {
   font-size: var(--font-size-xl);
+}
+
+.disabled {
+  opacity: 0.5;
 }

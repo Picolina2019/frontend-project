@@ -12,5 +12,9 @@
   "main": "HUVUD",
   "Enter": "Logga in",
   "Login": "Namnet",
-  "Password": "Koden"
+  "Password": "Koden",
+  "Authorisation form": "Logning sida",
+  "User enters wrong username or password": "fel användarnamn eller lösenord",
+  "Wrong username or password": "Fel användarnamn eller lösenord",
+  "Logout": "Logga ut"
 }

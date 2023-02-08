@@ -1,5 +1,11 @@
 import { Omit } from '@reduxjs/toolkit/dist/tsHelpers';
-import React, { InputHTMLAttributes, useEffect, useRef, useState } from 'react';
+import React, {
+  InputHTMLAttributes,
+  memo,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { classNames } from 'shared/lib/classNames';
 import styles from './Input.module.scss';
 
@@ -15,44 +21,53 @@ interface InputProps extends HTMLInputProps {
   autoFocus?: boolean;
 }
 
-export const Input = ({
-  className,
-  onChange,
-  value,
-  type = 'text',
-  placeholder,
-  autoFocus,
-  ...otherProps
-}: InputProps) => {
-  const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onChange?.(e.target.value);
-  };
-  const inputReference = useRef<HTMLInputElement>(null);
-  const [isFocused, setIsFocused] = useState(false);
-  useEffect(() => {
-    inputReference.current?.focus();
-  }, []);
-  useEffect(() => {
-    if (autoFocus) {
+export const Input = memo(
+  ({
+    className,
+    onChange,
+    value,
+    type = 'text',
+    placeholder,
+    autoFocus,
+    ...otherProps
+  }: InputProps) => {
+    const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+      onChange?.(e.target.value);
+    };
+    const inputReference = useRef<HTMLInputElement>(null);
+    const [isFocused, setIsFocused] = useState(false);
+
+    const onBlur = () => {
+      setIsFocused(false);
+    };
+
+    const onFocus = () => {
       setIsFocused(true);
-      inputReference.current?.focus();
-    }
-  }, [autoFocus]);
-  return (
-    <div className={classNames(styles.wrapper, {}, [className])}>
-      {placeholder && (
-        <div className={styles.placeholder}>{`${placeholder}>`}</div>
-      )}
-      <input
-        ref={inputReference}
-        className={styles.input}
-        type={type}
-        value={value}
-        onChange={onChangeHandler}
-        // eslint-disable-next-line jsx-a11y/no-autofocus
-        autoFocus={isFocused}
-        {...otherProps}
-      />
-    </div>
-  );
-};
+    };
+    useEffect(() => {
+      if (autoFocus) {
+        setIsFocused(true);
+        inputReference.current?.focus();
+      }
+    }, [autoFocus]);
+    return (
+      <div className={classNames(styles.wrapper, {}, [className])}>
+        {placeholder && (
+          <div className={styles.placeholder}>{`${placeholder}>`}</div>
+        )}
+        <input
+          ref={inputReference}
+          className={styles.input}
+          type={type}
+          value={value}
+          onChange={onChangeHandler}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          // eslint-disable-next-line jsx-a11y/no-autofocus
+          autoFocus={isFocused}
+          {...otherProps}
+        />
+      </div>
+    );
+  },
+);
