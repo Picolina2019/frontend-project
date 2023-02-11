@@ -20,6 +20,8 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
+    'react/jsx-indent-props': [2, 4],
+
     'react/jsx-filename-extension': [
       2,
       {
@@ -69,6 +71,7 @@ module.exports = {
       files: ['**/src/**/*.test/{ts,tsx}'],
       rules: {
         'i18next/no-literal-string': 'off',
+        'max-len': 'off',
       },
     },
   ],

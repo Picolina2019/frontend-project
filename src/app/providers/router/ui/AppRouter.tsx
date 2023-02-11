@@ -9,11 +9,11 @@ const AppRouter = () => (
       <Route
         key={path}
         path={path}
-        element={(
+        element={
           <Suspense fallback={<PageLoader />}>
-            <div className="pageWrapper">{element}</div>
+            <div className='pageWrapper'>{element}</div>
           </Suspense>
-        )}
+        }
       />
     ))}
   </Routes>
