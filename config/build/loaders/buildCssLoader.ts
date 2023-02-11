@@ -5,7 +5,6 @@ export function buildCssLoader(isDev: boolean) {
     test: /\.s[ac]ss$/i,
     use: [
       isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
-
       {
         loader: 'css-loader',
         options: {
