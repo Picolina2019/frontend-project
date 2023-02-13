@@ -13,8 +13,8 @@
   "Enter": "Login",
   "Login": "Login",
   "Password": "Password",
-  "Authorisation form": "Authorisation form",
   "User enters wrong username or password": "Wrong username or password",
   "Wrong username or password": "Wrong username or password",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Authorization": "Authorisation form"
 }

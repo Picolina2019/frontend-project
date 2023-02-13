@@ -1,4 +1,3 @@
-
 import { getUserAuthData, userActions } from 'entities/User';
 import { LoginModal } from 'features/AuthByUserName/ui/LoginModal/LoginModal';
 
@@ -50,7 +49,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         onClick={openModal}>
         {t('Enter')}
       </Button>
-      <LoginModal isOpen={isAuthModal} onClose={closeModal} />
+      {isAuthModal && <LoginModal isOpen={isAuthModal} onClose={closeModal} />}
     </div>
   );
 };
