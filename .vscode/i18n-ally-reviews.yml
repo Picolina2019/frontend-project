@@ -85,3 +85,27 @@ reviews:
             suggestion: ''
             type: approve
             time: '2023-02-06T22:32:00.237Z'
+  Profile page:
+    locales:
+      swe:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: VwsSN1UD0l2XEr67D3ySe
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-15T22:20:10.710Z'
+  About page:
+    locales:
+      swe:
+        comments:
+          - user:
+              name: Picolina2019
+              email: j.sakowicz91@gmail.com
+            id: gTOm5gFegr6kp2AvHmXL4
+            comment: ''
+            suggestion: ''
+            type: approve
+            time: '2023-02-16T21:11:18.845Z'

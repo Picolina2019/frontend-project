@@ -1,9 +1,9 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 
 import { useTranslation } from 'react-i18next';
 import { Input } from 'shared/ui/Input/Input';
 
-const MainPage = () => {
+const MainPage = memo(() => {
   const { t } = useTranslation();
   const [value, setValue] = useState('');
   const valueOnChange = (val: string) => {
@@ -23,5 +23,5 @@ const MainPage = () => {
       <span>{value}</span>
     </div>
   );
-};
+});
 export default MainPage;

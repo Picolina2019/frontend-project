@@ -16,5 +16,7 @@
   "User enters wrong username or password": "fel användarnamn eller lösenord",
   "Wrong username or password": "Fel användarnamn eller lösenord",
   "Logout": "Logga ut",
-  "Authorization": "Logning sida"
+  "Authorization": "Logning sida",
+  "Profile page": "Profil sida",
+  "About page": "Om sida"
 }

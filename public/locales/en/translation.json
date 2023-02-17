@@ -16,5 +16,7 @@
   "User enters wrong username or password": "Wrong username or password",
   "Wrong username or password": "Wrong username or password",
   "Logout": "Logout",
-  "Authorization": "Authorisation form"
+  "Authorization": "Authorisation form",
+  "Profile page": "Profile page",
+  "About page": "About page"
 }
