@@ -7,12 +7,17 @@
   "Logout": "Logout",
   "Page is not found": "Page is not found",
   "Password": "Password",
+  "Profile": "Profile",
   "Profile page": "Profile page",
   "Refresh page": "Refresh page",
   "Something went wrong": "Something went wrong",
   "Wrong username or password": "Wrong username or password",
+  "Your name": "Your name",
+  "Your surname": "Your surname",
   "about": "about",
+  "edit": "edit",
   "error": "error",
   "main": "main",
-  "main page": "main page"
+  "main page": "main page",
+  "profile": "profile"
 }

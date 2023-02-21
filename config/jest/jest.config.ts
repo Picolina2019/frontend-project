@@ -9,6 +9,7 @@ export default {
   clearMocks: true,
   globals: {
     __IS_DEV__: true,
+    __API__: '',
   },
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: ['/node_modules/'],

@@ -21,7 +21,7 @@ import { loginReducer } from '../../model/slice/loginSlice';
 
 export interface LoginFormProps {
   className?: string;
-  onSuccess?: () => void;
+  onSuccess: () => void;
 }
 
 const initialReducers: ReducersList = {
@@ -48,12 +48,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     },
     [dispatch]
   );
+
   const onLoginClick = useCallback(async () => {
     const result = await dispatch(loginByUsername({ username, password }));
     if (result.meta.requestStatus === 'fulfilled') {
       onSuccess();
     }
-  }, [dispatch, username, password, onSuccess]);
+  }, [onSuccess, dispatch, password, username]);
+
   return (
     <DynamicModuleLoader removeAfterUnmount reducers={initialReducers}>
       <div className={classNames(styles.LoginForm, {}, [className])}>

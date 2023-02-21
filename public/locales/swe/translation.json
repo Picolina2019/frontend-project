@@ -18,5 +18,10 @@
   "Logout": "Logga ut",
   "Authorization": "Logning sida",
   "Profile page": "Profil sida",
-  "About page": "Om sida"
+  "About page": "Om sida",
+  "profile": "profil",
+  "edit": "skriva om",
+  "Profile": "Profil",
+  "Your name": "Ditt namn",
+  "Your surname": "Ditt efternamn"
 }

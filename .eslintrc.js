@@ -54,6 +54,7 @@ module.exports = {
     'react/button-has-type': 'off',
     'react/jsx-closing-bracket-location': 'off',
     'react/jsx-one-expression-per-line': 'off',
+    'no-undef': 'off',
     'max-len': [
       'error',
       {
@@ -65,6 +66,7 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true,
+    __API__: true,
   },
   overrides: [
     {
