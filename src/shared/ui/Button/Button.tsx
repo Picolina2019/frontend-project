@@ -5,6 +5,7 @@ import styles from './Button.module.scss';
 export enum ButtonTheme {
   CLEAR = 'clear',
   OUTLINE = 'outline',
+  OUTLINE_RED = 'outline_red',
   BACKGROUND = 'background',
   BACKGROUND_INVERTED = 'backgroundInverted',
 }
@@ -25,8 +26,15 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = memo((props: ButtonProps) => {
-  const { className, children, theme = ButtonTheme.OUTLINE, square, size = ButtonSize.M, disabled, ...other } =
-    props;
+  const {
+    className,
+    children,
+    theme = ButtonTheme.OUTLINE,
+    square,
+    size = ButtonSize.M,
+    disabled,
+    ...other
+  } = props;
   const mods: Mods = {
     [styles[theme]]: true,
     [styles.square]: square,

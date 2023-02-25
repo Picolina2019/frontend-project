@@ -6,19 +6,20 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import { classNames } from 'shared/lib/classNames/classNames';
+import { classNames, Mods } from 'shared/lib/classNames/classNames';
 import styles from './Input.module.scss';
 
 type HTMLInputProps = Omit<
   InputHTMLAttributes<HTMLInputElement>,
-  'value' | 'onChange'
+  'value' | 'onChange' | 'readOnly'
 >;
 interface InputProps extends HTMLInputProps {
   className?: string;
-  value?: string;
+  value?: string | number;
   onChange?: (value: string) => void;
   placeholder?: string;
   autoFocus?: boolean;
+  readonly?: boolean;
 }
 
 export const Input = memo(
@@ -29,6 +30,7 @@ export const Input = memo(
     type = 'text',
     placeholder,
     autoFocus,
+    readonly,
     ...otherProps
   }: InputProps) => {
     const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,8 +52,13 @@ export const Input = memo(
         inputReference.current?.focus();
       }
     }, [autoFocus]);
+
+    const mods: Mods = {
+      [styles.readonly]: readonly,
+    };
+
     return (
-      <div className={classNames(styles.wrapper, {}, [className])}>
+      <div className={classNames(styles.wrapper, mods, [className])}>
         {placeholder && (
           <div className={styles.placeholder}>{`${placeholder}>`}</div>
         )}
@@ -63,11 +70,12 @@ export const Input = memo(
           onChange={onChangeHandler}
           onBlur={onBlur}
           onFocus={onFocus}
+          readOnly={readonly}
           // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={isFocused}
           {...otherProps}
         />
       </div>
     );
-  },
+  }
 );

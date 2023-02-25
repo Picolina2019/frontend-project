@@ -23,5 +23,14 @@
   "edit": "skriva om",
   "Profile": "Profil",
   "Your name": "Ditt namn",
-  "Your surname": "Ditt efternamn"
+  "Your surname": "Ditt efternamn",
+  "Some error happened": "Nogot gick fel",
+  "abort": "abort",
+  "safe": "skapa",
+  "Age": "Gammal",
+  "City": "Stad",
+  "Enter your name": "Skriv ditt namn",
+  "Avatar link": "Profil lank",
+  "Currency": "valuta",
+  "Country": "Land"
 }

@@ -23,5 +23,14 @@
   "edit": "edit",
   "Profile": "Profile",
   "Your name": "Your name",
-  "Your surname": "Your surname"
+  "Your surname": "Your surname",
+  "Some error happened": "Some error happened",
+  "abort": "abort",
+  "safe": "safe",
+  "Age": "Age ",
+  "City": "City",
+  "Enter your name": "Enter your name",
+  "Avatar link": "Avatar link",
+  "Currency": "Currency",
+  "Country": "Country"
 }
