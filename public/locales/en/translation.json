@@ -32,5 +32,10 @@
   "Enter your name": "Enter your name",
   "Avatar link": "Avatar link",
   "Currency": "Currency",
-  "Country": "Country"
+  "Country": "Country",
+  "Server error": "Server error",
+  "Incorrect country": "Incorrect country",
+  "No data": "No data",
+  "Name and Surname": "Name and Surname",
+  "Incorrect age": "Incorrect age"
 }

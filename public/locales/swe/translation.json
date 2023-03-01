@@ -32,5 +32,10 @@
   "Enter your name": "Skriv ditt namn",
   "Avatar link": "Profil lank",
   "Currency": "valuta",
-  "Country": "Land"
+  "Country": "Land",
+  "Server error": "Server fel",
+  "Incorrect country": "Fel land",
+  "No data": "Ingen information",
+  "Name and Surname": "Namn och Efternamn",
+  "Incorrect age": "Fel ålder"
 }

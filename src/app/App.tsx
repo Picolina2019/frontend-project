@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from 'react';
 
 import { useDispatch } from 'react-redux';
 import { userActions } from 'entities/User';
+import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
 import { classNames } from '../shared/lib/classNames/classNames';
@@ -18,9 +19,9 @@ export const App = () => {
 
   return (
     <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback=''>
+      <Suspense fallback={<PageLoader />}>
         <Navbar />
-        <div className='contentPage'>
+        <div className="contentPage">
           <Sidebar />
           <AppRouter />
         </div>
