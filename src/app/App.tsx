@@ -2,8 +2,8 @@ import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense, useEffect, useState } from 'react';
 
-import { useDispatch } from 'react-redux';
-import { userActions } from 'entities/User';
+import { useDispatch, useSelector } from 'react-redux';
+import { getUserMounted, userActions } from 'entities/User';
 import { PageLoader } from 'widgets/PageLoader/ui/PageLoader';
 import { AppRouter } from './providers/router';
 import { useTheme } from './providers/ThemeProvider';
@@ -12,6 +12,7 @@ import { classNames } from '../shared/lib/classNames/classNames';
 export const App = () => {
   const { theme } = useTheme();
   const dispatch = useDispatch();
+  const mounted = useSelector(getUserMounted);
 
   useEffect(() => {
     dispatch(userActions.initAuthData());
@@ -21,9 +22,9 @@ export const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
-        <div className="contentPage">
+        <div className='contentPage'>
           <Sidebar />
-          <AppRouter />
+          {mounted && <AppRouter />}
         </div>
       </Suspense>
     </div>

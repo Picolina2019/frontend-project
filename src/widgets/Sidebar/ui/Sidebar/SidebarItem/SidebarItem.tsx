@@ -18,6 +18,7 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
   if (item.authOnly && !isAuth) {
     return null;
   }
+  console.log('kkk', isAuth);
   return (
     <AppLink
       theme={AppLinkTheme.SECONDARY}
