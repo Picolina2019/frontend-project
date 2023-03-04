@@ -10,13 +10,16 @@
   "Enet your name": "Enet your name",
   "Enter": "Enter",
   "Enter your name": "Enter your name",
+  "Error happened": "Error happened",
   "Incorrect age": "Incorrect age",
   "Incorrect country": "Incorrect country",
   "Login": "Login",
   "Logout": "Logout",
   "Name and Surname": "Name and Surname",
   "No data": "No data",
+  "Pa": "Pa",
   "Page is not found": "Page is not found",
+  "Paragraph is not found": "Paragraph is not found",
   "Password": "Password",
   "Profile": "Profile",
   "Profile page": "Profile page",
@@ -43,6 +46,9 @@
   "Имя и фамилия обязательны": "Имя и фамилия обязательны",
   "Некорректный возраст": "Некорректный возраст",
   "Некорректный регион": "Некорректный регион",
+  "Произошла ошибка при загрузке статьи": {
+    "": ""
+  },
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
   "Укажите алюту": "Укажите алюту",
   "Укажите валюту": "Укажите валюту"

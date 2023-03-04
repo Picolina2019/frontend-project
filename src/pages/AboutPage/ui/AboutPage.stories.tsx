@@ -16,12 +16,12 @@ export default {
 
 const Template: ComponentStory<typeof AboutPage> = () => (
   // eslint-disable-next-line react/jsx-props-no-spreading
-  <AboutPage  />
+  <AboutPage />
 );
 
 export const Light = Template.bind({});
 Light.args = {};
 Light.decorators = [StoreDecorator({})];
-export const Dark = Template.bind({}); 
+export const Dark = Template.bind({});
 Dark.args = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK), StoreDecorator({})];
