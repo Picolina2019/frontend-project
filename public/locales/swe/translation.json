@@ -1,7 +1,7 @@
 {
   "hello": "hej",
   "translate": "översätt",
-  "Page is not found": "sidan hittades inte",
+  "Page is not found": "Sida hittades inte",
   "main page": "första sida",
   "secondary page": "andra sida",
   "Something went wrong": "Nagot gick fel",
@@ -41,5 +41,7 @@
   "Paragraph is not found": "Texten kan inte hittats",
   "Error happened": "Någit gick fel",
   "Comments": "Kommentarer",
-  "No comments": "Inga kommentarer"
+  "No comments": "Inga kommentarer",
+  "Enter comment": "Kommentera",
+  "Send": "Skicka"
 }

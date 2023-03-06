@@ -1,7 +1,7 @@
 {
   "hello": "hello",
   "translate": "translate",
-  "Page is not found": "page is not found",
+  "Page is not found": "Page is not found",
   "main page": "main page\n",
   "secondary page": "secondary page",
   "Something went wrong": "Something went wrong",
@@ -41,5 +41,7 @@
   "Paragraph is not found": "Paragraph is not found",
   "Error happened": "Error happened",
   "Comments": "Comments",
-  "No comments": "No comments"
+  "No comments": "No comments",
+  "Enter comment": "Enter comment",
+  "Send": "Send"
 }
