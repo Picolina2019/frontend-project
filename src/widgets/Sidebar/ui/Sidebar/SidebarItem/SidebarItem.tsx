@@ -18,12 +18,12 @@ export const SidebarItem = ({ item, collapsed }: SidebarItemProps) => {
   if (item.authOnly && !isAuth) {
     return null;
   }
-  console.log('kkk', isAuth);
+
   return (
     <AppLink
-      theme={AppLinkTheme.SECONDARY}
-      to={item.path}
-      className={classNames(styles.item, { [styles.collapsed]: collapsed })}>
+        theme={AppLinkTheme.SECONDARY}
+        to={item.path}
+        className={classNames(styles.item, { [styles.collapsed]: collapsed })}>
       <item.Icon className={styles.icon} />
       <span className={styles.link}>{t(item.text)} </span>
     </AppLink>

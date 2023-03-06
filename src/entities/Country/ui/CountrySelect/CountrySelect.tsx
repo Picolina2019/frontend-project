@@ -25,17 +25,17 @@ export const CountrySelect = memo(
       (value: string) => {
         onChange?.(value as Country);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
       <Select
-        className={classNames('', {}, [className])}
-        label={t('Country')}
-        options={options}
-        value={value}
-        onChange={onChangeHandler}
-        readonly={readonly}
+          className={classNames('', {}, [className])}
+          label={t('Country')}
+          options={options}
+          value={value}
+          onChange={onChangeHandler}
+          readonly={readonly}
       />
     );
   }

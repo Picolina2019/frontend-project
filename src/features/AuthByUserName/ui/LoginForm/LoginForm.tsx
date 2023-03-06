@@ -39,14 +39,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     (value: string) => {
       dispatch(loginActions.setUsername(value));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const onChangePassword = useCallback(
     (value: string) => {
       dispatch(loginActions.setPassword(value));
     },
-    [dispatch]
+    [dispatch],
   );
 
   const onLoginClick = useCallback(async () => {
@@ -62,31 +62,31 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         <Text title={t('Authorisation form')} />
         {error && (
           <Text
-            text={t('Wrong username or password')}
-            theme={TextTheme.ERROR}
+              text={t('Wrong username or password')}
+              theme={TextTheme.ERROR}
           />
         )}
         <Input
-          onChange={onChangeUsername}
-          autoFocus
-          placeholder={t('Login')}
-          type='text'
-          className={styles.input}
-          value={username}
+            onChange={onChangeUsername}
+            autoFocus
+            placeholder={t('Login')}
+            type="text"
+            className={styles.input}
+            value={username}
         />
         <Input
-          onChange={onChangePassword}
-          autoFocus
-          placeholder={t('Password')}
-          type='text'
-          className={styles.input}
-          value={password}
+            onChange={onChangePassword}
+            autoFocus
+            placeholder={t('Password')}
+            type="text"
+            className={styles.input}
+            value={password}
         />
         <Button
-          disabled={isLoading}
-          onClick={onLoginClick}
-          theme={ButtonTheme.OUTLINE}
-          className={styles.btn}>
+            disabled={isLoading}
+            onClick={onLoginClick}
+            theme={ButtonTheme.OUTLINE}
+            className={styles.btn}>
           {t('Enter')}
         </Button>
       </div>

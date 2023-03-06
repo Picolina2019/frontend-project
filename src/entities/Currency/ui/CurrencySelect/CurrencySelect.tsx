@@ -25,17 +25,17 @@ export const CurrencySelect = memo(
       (value: string) => {
         onChange?.(value as Currency);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
       <Select
-        className={classNames('', {}, [className])}
-        label={t('Currency')}
-        options={options}
-        value={value}
-        onChange={onChangeHandler}
-        readonly={readonly}
+          className={classNames('', {}, [className])}
+          label={t('Currency')}
+          options={options}
+          value={value}
+          onChange={onChangeHandler}
+          readonly={readonly}
       />
     );
   }

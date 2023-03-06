@@ -48,14 +48,18 @@
   position: absolute;
   right: -32px;
   bottom: 32px;
+
 }
 
 .links {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin-left: 10px;
-  align-items: center;
+  margin-left: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  outline: none;
+
 }
 
 .linkWithIcon {
@@ -68,7 +72,8 @@
 
   margin-left: 6px;
   margin-top: 6px;
-  opacity: 1,
+  opacity: 1;
+  outline: none;
 
 
 }
