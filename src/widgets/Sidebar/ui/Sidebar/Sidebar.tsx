@@ -1,12 +1,11 @@
 /* eslint-disable i18next/no-literal-string */
 import { memo, useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { useSelector } from 'react-redux';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, ButtonSize, ButtonTheme } from 'shared/ui/Button/Button';
 import { LangSwitcher } from 'shared/ui/LangSwitcher/LandSwitcher';
-import { SidebarItemsList } from 'widgets/Sidebar/model/items';
+import { getSidebarItems } from 'widgets/Sidebar/model/selectors/getSidebarItems';
 import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import styles from './Sidebar.module.scss';
 import { SidebarItem } from './SidebarItem/SidebarItem';
@@ -18,30 +17,31 @@ interface SidebarProps {
 export const Sidebar = memo(({ className }: SidebarProps) => {
   const { t } = useTranslation();
   const [collapsed, setCollapsed] = useState(false);
+  const sidebarItemsList = useSelector(getSidebarItems);
   const onToggle = () => {
     setCollapsed((prev) => !prev);
   };
 
   const itemsList = useMemo(
-    () => SidebarItemsList.map((item) => (
+    () => sidebarItemsList.map((item) => (
       <SidebarItem item={item} collapsed={collapsed} key={item.path} />
     )),
-    [collapsed],
+    [collapsed, sidebarItemsList],
   );
 
   return (
     <div
-        data-testid="sidebar"
-        className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
-          className,
-        ])}>
+      data-testid='sidebar'
+      className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
+        className,
+      ])}>
       <Button
-          data-testid="sidebar-toggle"
-          onClick={onToggle}
-          className={styles.collapsedBtn}
-          theme={ButtonTheme.BACKGROUND_INVERTED}
-          size={ButtonSize.L}
-          square>
+        data-testid='sidebar-toggle'
+        onClick={onToggle}
+        className={styles.collapsedBtn}
+        theme={ButtonTheme.BACKGROUND_INVERTED}
+        size={ButtonSize.L}
+        square>
         {collapsed ? '>' : '<'}
       </Button>
       <div className={styles.links}>{itemsList}</div>

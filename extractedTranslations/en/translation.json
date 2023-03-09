@@ -4,6 +4,7 @@
   "Age": "Age",
   "Authorisation form": "Authorisation form",
   "Avatar link": "Avatar link",
+  "Back to list": "Back to list",
   "City": "City",
   "Comments": "Comments",
   "Country": "Country",
@@ -26,6 +27,7 @@
   "Password": "Password",
   "Profile": "Profile",
   "Profile page": "",
+  "Read more": "Read more",
   "Refresh page": "Refresh page",
   "Send": "Send",
   "Server error": "Server error",
@@ -67,5 +69,12 @@
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
   "Сохранить": "Сохранить",
   "Укажите алюту": "Укажите алюту",
-  "Укажите валюту": "Укажите валюту"
+  "Укажите валюту": "Укажите валюту",
+  "Читать далее": {
+    "": {
+      "": {
+        "": ""
+      }
+    }
+  }
 }
