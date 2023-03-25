@@ -45,5 +45,17 @@
   "Enter comment": "Enter comment",
   "Send": "Send",
   "Read more": "Read more...",
-  "Back to list": "Back to list"
+  "Back to list": "Back to list",
+  "Search": "Search",
+  "ascending": "ascending",
+  "descending": "descending",
+  "date": "date",
+  "name": "name",
+  "views": "views",
+  "sort by": "sort by",
+  "by": "by",
+  "All articles": "All articles",
+  "IT": "IT",
+  "Economy": "Economy",
+  "Articles not found": "Articles not found"
 }

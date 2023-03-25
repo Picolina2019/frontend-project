@@ -45,5 +45,17 @@
   "Enter comment": "Kommentera",
   "Send": "Skicka",
   "Read more": "läsa mer...",
-  "Back to list": "Tillbacka"
+  "Back to list": "Tillbacka",
+  "Search": "Hitta",
+  "ascending": "stigande",
+  "descending": "fallande",
+  "date": "datum",
+  "name": "namn",
+  "views": "visningar",
+  "sort by": "sortera",
+  "by": "after",
+  "All articles": "Alla artiklarna",
+  "IT": "IT",
+  "Economy": "Ekonomi",
+  "Articles not found": "Artikles hittades inte"
 }

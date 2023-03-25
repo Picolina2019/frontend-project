@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 // import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
-import cls from './Page.module.scss';
+import styles from './Page.module.scss';
 
 interface PageProps {
   className?: string;
@@ -38,7 +38,6 @@ export const Page = memo((props: PageProps) => {
   });
 
   const onScroll = useThrottle((e: UIEvent<HTMLDivElement>) => {
-    console.log('Katia', 'scroll');
     dispatch(
       uiActions.setScrollPosition({
         position: e.currentTarget.scrollTop,
@@ -50,10 +49,10 @@ export const Page = memo((props: PageProps) => {
   return (
     <section
       ref={wrapperRef}
-      className={classNames(cls.Page, {}, [className])}
+      className={classNames(styles.Page, {}, [className])}
       onScroll={onScroll}>
       {children}
-      <div ref={triggerRef} />
+      {onScrollEnd ? <div className={styles.trigger} ref={triggerRef} /> : null}
     </section>
   );
 });
