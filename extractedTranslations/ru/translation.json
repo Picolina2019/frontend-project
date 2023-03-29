@@ -1,5 +1,4 @@
 {
-  "": "",
   "About page": "About page",
   "Age": "Age",
   "All articles": "All articles",
@@ -16,7 +15,6 @@
   "Economy": "Economy",
   "Edit": "Edit",
   "Edit page": "Edit page",
-  "Enet your name": "Enet your name",
   "Enter": "Enter",
   "Enter comment": "Enter comment",
   "Enter your name": "Enter your name",
@@ -30,12 +28,10 @@
   "Name and Surname": "Name and Surname",
   "No comments": "No comments",
   "No data": "No data",
-  "Pa": "Pa",
   "Page is not found": "Page is not found",
   "Paragraph is not found": "Paragraph is not found",
   "Password": "Password",
   "Profile": "Profile",
-  "Profile page": "Profile page",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Refresh page": "Refresh page",
@@ -48,46 +44,15 @@
   "Your name": "Your name",
   "Your surname": "Your surname",
   "abort": "abort",
-  "about": "about",
   "ascending": "ascending",
   "by": "by",
   "date": "date",
   "descending": "descending",
   "edit": "edit",
   "error": "error",
-  "main": "main",
   "main page": "main page",
   "name": "name",
-  "profile": "profile",
   "safe": "safe",
   "sort by": "sort by",
-  "views": "views",
-  "Ваш возраст": "Ваш возраст",
-  "Введите имя пользователя": "Введите имя пользователя",
-  "Введите ссылку на аватар": "Введите ссылку на аватар",
-  "Город": "Город",
-  "Данные не указаны": "Данные не указаны",
-  "Имя и фамилия обязательны": "Имя и фамилия обязательны",
-  "Комментарии отсутствуют": "Комментарии отсутствуют",
-  "Некорректный возраст": "Некорректный возраст",
-  "Некорректный регион": "Некорректный регион",
-  "Отменить": "Отменить",
-  "Поиск": "Поиск",
-  "Произошла ошибка при загрузке статьи": {
-    "": ""
-  },
-  "Профиль": "Профиль",
-  "Редактировать": "Редактировать",
-  "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
-  "Сохранить": "Сохранить",
-  "Статьи не найдены": "Статьи не найдены",
-  "Укажите алюту": "Укажите алюту",
-  "Укажите валюту": "Укажите валюту",
-  "Читать далее": {
-    "": {
-      "": {
-        "": ""
-      }
-    }
-  }
+  "views": "views"
 }
