@@ -12,7 +12,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useCallback } from 'react';
 import { getUserAuthData } from 'entities/User';
-import styles from './ProfilePageHeader.module.scss';
+import { HStack } from 'shared/ui/Stack';
 
 interface ProfilePageHeaderProps {
   className?: string;
@@ -37,35 +37,26 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <div className={classNames(styles.ProfilePageHeader, {}, [className])}>
+    <HStack max justify='between' className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
-        <div className={styles.btnsWrapper}>
+        <div>
           {readonly ? (
-            <Button
-              onClick={onEdit}
-              className={styles.editBtn}
-              theme={ButtonTheme.OUTLINE}>
+            <Button onClick={onEdit} theme={ButtonTheme.OUTLINE}>
               {t('edit')}
             </Button>
           ) : (
-            <>
-              <Button
-                onClick={onCancelEdit}
-                className={styles.editBtn}
-                theme={ButtonTheme.OUTLINE_RED}>
+            <HStack gap='8'>
+              <Button onClick={onCancelEdit} theme={ButtonTheme.OUTLINE_RED}>
                 {t('abort')}
               </Button>
-              <Button
-                onClick={onSave}
-                className={styles.saveBtn}
-                theme={ButtonTheme.OUTLINE}>
+              <Button onClick={onSave} theme={ButtonTheme.OUTLINE}>
                 {t('safe')}
               </Button>
-            </>
+            </HStack>
           )}
         </div>
       )}
-    </div>
+    </HStack>
   );
 };

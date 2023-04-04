@@ -9,8 +9,8 @@ import { Currency } from 'entities/Currency/model/types/currency';
 import { Country } from 'entities/Country/model/types/country';
 import { CurrencySelect } from 'entities/Currency';
 import { CountrySelect } from 'entities/Country/ui/CountrySelect/CountrySelect';
+import { HStack, VStack } from 'shared/ui/Stack';
 import styles from './ProfileCard.module.scss';
-
 
 interface ProfileCardProps {
   className?: string;
@@ -46,34 +46,39 @@ export const ProfileCard = ({
   const { t } = useTranslation();
   if (isLoading) {
     return (
-      <div
+      <HStack
+        justify='center'
         className={classNames(styles.ProfileCard, { [styles.loading]: true }, [
           className,
         ])}>
         <Loader />
-      </div>
+      </HStack>
     );
   }
   if (error) {
     return (
-      <div
+      <HStack
+        justify='center'
         className={classNames(styles.ProfileCard, { [styles.loading]: true }, [
           className,
         ])}>
         <Text title={t('Some error happened')} theme={TextTheme.ERROR} />
-      </div>
+      </HStack>
     );
   }
   const mods: Mods = {
     [styles.editing]: !readonly,
   };
   return (
-    <div className={classNames(styles.ProfileCard, mods, [className])}>
+    <VStack
+      gap='8'
+      max
+      className={classNames(styles.ProfileCard, mods, [className])}>
       <div className={styles.data}>
         {data?.avatar && (
-          <div className={styles.avatarWrapper}>
+          <HStack justify='center' className={styles.avatarWrapper}>
             <Avatar src={data?.avatar} alt='Profile' />
-          </div>
+          </HStack>
         )}
 
         <Input
@@ -129,8 +134,8 @@ export const ProfileCard = ({
           value={data?.country}
           onChange={onChangeCountry}
           readonly={readonly}
-        /> 
+        />
       </div>
-    </div>
+    </VStack>
   );
 };
