@@ -28,8 +28,18 @@
   text-align: right;
 }
 
-.center {
+π .center {
   text-align: center;
+}
+
+.size_s {
+  .title {
+    font: var(--font-s);
+  }
+
+  .text {
+    font: var(--font-s);
+  }
 }
 
 .size_m {
