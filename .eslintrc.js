@@ -20,8 +20,6 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
   rules: {
-    'react/jsx-indent-props': [2, 4],
-
     'react/jsx-filename-extension': [
       2,
       {
@@ -43,7 +41,15 @@ module.exports = {
       'error',
       {
         markupOnly: true,
-        ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap'],
+        ignoreAttribute: [
+          'data-testid',
+          'to',
+          'target',
+          'justify',
+          'align',
+          'direction',
+          'gap',
+        ],
       },
     ],
     'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
@@ -51,6 +57,7 @@ module.exports = {
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'object-curly-newline': 'off',
+    'react/jsx-indent': 'off',
     'react/button-has-type': 'off',
     'react/jsx-closing-bracket-location': 'off',
     'react/jsx-one-expression-per-line': 'off',

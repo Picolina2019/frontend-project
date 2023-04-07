@@ -5,7 +5,7 @@ import { Input } from 'shared/ui/Input/Input';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { useSelector } from 'react-redux';
 import { memo, useCallback } from 'react';
-import { loginActions } from 'features/AuthByUserName/model/slice/loginSlice';
+import { loginActions, loginReducer } from 'features/AuthByUserName/model/slice/loginSlice';
 import { getLoginUsername } from 'features/AuthByUserName/model/selectors/getLoginUsername/getLoginUsername';
 import { loginByUsername } from 'features/AuthByUserName/model/services/loginByUsername/loginByUsername';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
@@ -17,7 +17,6 @@ import {
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import styles from './LoginForm.module.scss';
-import { loginReducer } from '../../model/slice/loginSlice';
 
 export interface LoginFormProps {
   className?: string;
@@ -39,14 +38,14 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
     (value: string) => {
       dispatch(loginActions.setUsername(value));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangePassword = useCallback(
     (value: string) => {
       dispatch(loginActions.setPassword(value));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onLoginClick = useCallback(async () => {
@@ -62,31 +61,31 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         <Text title={t('Authorisation form')} />
         {error && (
           <Text
-              text={t('Wrong username or password')}
-              theme={TextTheme.ERROR}
+            text={t('Wrong username or password')}
+            theme={TextTheme.ERROR}
           />
         )}
         <Input
-            onChange={onChangeUsername}
-            autoFocus
-            placeholder={t('Login')}
-            type="text"
-            className={styles.input}
-            value={username}
+          onChange={onChangeUsername}
+          autoFocus
+          placeholder={t('Login')}
+          type='text'
+          className={styles.input}
+          value={username}
         />
         <Input
-            onChange={onChangePassword}
-            autoFocus
-            placeholder={t('Password')}
-            type="text"
-            className={styles.input}
-            value={password}
+          onChange={onChangePassword}
+          autoFocus
+          placeholder={t('Password')}
+          type='text'
+          className={styles.input}
+          value={password}
         />
         <Button
-            disabled={isLoading}
-            onClick={onLoginClick}
-            theme={ButtonTheme.OUTLINE}
-            className={styles.btn}>
+          disabled={isLoading}
+          onClick={onLoginClick}
+          theme={ButtonTheme.OUTLINE}
+          className={styles.btn}>
           {t('Enter')}
         </Button>
       </div>

@@ -1,16 +1,16 @@
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { getUserAuthData, userActions } from 'entities/User';
-import { LoginModal } from 'features/AuthByUserName/ui/LoginModal/LoginModal';
-
 import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
+import { Dropdown } from 'shared/ui/Dropdown/Dropdown';
 import { RoutePath } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Text, TextTheme } from 'shared/ui/Text/Text';
-
+import { LoginModal } from 'features/AuthByUserName';
+import { Avatar } from 'shared/ui/Avatar/Avatar';
 import styles from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -42,14 +42,23 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           title={t('Frontend app')}
         />
         <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
-          {t('Create article')}{' '}
+          {t('Create article')}
         </AppLink>
-        <Button
-          theme={ButtonTheme.CLEAR}
-          className={styles.links}
-          onClick={onLogout}>
-          {t('Logout')}
-        </Button>
+        <Dropdown
+          direction='bottom left'
+          className={styles.dropdown}
+          trigger={<Avatar size={30} src={authData.avatar} />}
+          items={[
+            {
+              content: t('Logout'),
+              onClick: onLogout,
+            },
+            {
+              content: t('Profile'),
+              href: RoutePath.profile + authData.id,
+            },
+          ]}
+        />
       </div>
     );
   }

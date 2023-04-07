@@ -1,6 +1,7 @@
 import { Fragment, ReactNode, useState } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
 import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../Stack';
 import { Button } from '../Button/Button';
 import styles from './ListBox.module.scss';
@@ -10,8 +11,6 @@ export interface ListBoxItem {
   content: ReactNode;
   disabled?: boolean;
 }
-
-type DropdownDirection = 'top' | 'bottom';
 
 interface ListBoxProps {
   items?: ListBoxItem[];
@@ -25,8 +24,10 @@ interface ListBoxProps {
 }
 
 const mapDirectionClass: Record<DropdownDirection, string> = {
-  bottom: styles.optionsBottom,
-  top: styles.optionsTop,
+  'bottom left': styles.optionsBottomLeft,
+  'bottom right': styles.optionsBottomRight,
+  'top left': styles.optionsTopLeft,
+  'top right': styles.optionsTopRight,
 };
 
 export function ListBox(props: ListBoxProps) {
@@ -37,35 +38,35 @@ export function ListBox(props: ListBoxProps) {
     defaultValue,
     onChange,
     readonly,
-    direction = 'bottom',
+    direction = 'bottom left',
     label,
   } = props;
 
   const optionsClasses = [mapDirectionClass[direction]];
 
   return (
-    <HStack gap="8">
+    <HStack gap='8'>
       {label && <span>{`${label}>`}</span>}
       <HListBox
-          disabled={readonly}
-          as="div"
-          className={classNames(styles.ListBox, {}, [className])}
-          value={value}
-          onChange={onChange}>
+        disabled={readonly}
+        as='div'
+        className={classNames(styles.ListBox, {}, [className])}
+        value={value}
+        onChange={onChange}>
         <HListBox.Button disabled={readonly} className={styles.trigger}>
           <Button disabled={readonly}>{value ?? defaultValue}</Button>
         </HListBox.Button>
         <HListBox.Options
-            className={classNames(styles.options, {}, optionsClasses)}>
+          className={classNames(styles.options, {}, optionsClasses)}>
           {items?.map((item) => (
             <HListBox.Option
-                key={item.value}
-                value={item.value}
-                disabled={item.disabled}
-                as={Fragment}>
+              key={item.value}
+              value={item.value}
+              disabled={item.disabled}
+              as={Fragment}>
               {({ active, selected }) => (
                 <li
-                    className={classNames(styles.item, {
+                  className={classNames(styles.item, {
                     [styles.active]: active,
                     [styles.disabled]: item.disabled,
                   })}>
