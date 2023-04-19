@@ -20,6 +20,7 @@
   "Enter": "Enter",
   "Enter comment": "Enter comment",
   "Enter your name": "Enter your name",
+  "Error": "Error",
   "Error happened": "Error happened",
   "Frontend app": "Frontend app",
   "IT": "",
@@ -35,6 +36,7 @@
   "Paragraph is not found": "Paragraph is not found",
   "Password": "Password",
   "Profile": "Profile",
+  "Profile is not found": "Profile is not found",
   "Profile page": "",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
@@ -88,6 +90,7 @@
     "": ""
   },
   "Профиль": "Профиль",
+  "Профиль не найден": "Профиль не найден",
   "Редактировать": "Редактировать",
   "Серверная ошибка при сохранении": "Серверная ошибка при сохранении",
   "Сохранить": "Сохранить",

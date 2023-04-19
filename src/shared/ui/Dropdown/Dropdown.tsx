@@ -29,17 +29,17 @@ const mapDirectionClass: Record<DropdownDirection, string> = {
 
 export function Dropdown(props: DropdownProps) {
   const { className, trigger, items, direction = 'bottom right' } = props;
-  console.log('Katia', items);
+
   const menuClasses = [mapDirectionClass[direction]];
 
   return (
-    <Menu as='div' className={classNames(styles.Dropdown, {}, [className])}>
+    <Menu as="div" className={classNames(styles.Dropdown, {}, [className])}>
       <Menu.Button className={styles.btn}>{trigger}</Menu.Button>
       <Menu.Items className={classNames(styles.menu, {}, menuClasses)}>
         {items.map((item) => {
           const content = ({ active }: { active: boolean }) => (
             <button
-              type='button'
+              type="button"
               disabled={item.disabled}
               onClick={item.onClick}
               className={classNames(styles.item, { [styles.active]: active })}>

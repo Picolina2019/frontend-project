@@ -18,6 +18,7 @@
   "Enter": "Enter",
   "Enter comment": "Enter comment",
   "Enter your name": "Enter your name",
+  "Error": "Error",
   "Error happened": "Error happened",
   "Frontend app": "Frontend app",
   "IT": "IT",
@@ -32,6 +33,7 @@
   "Paragraph is not found": "Paragraph is not found",
   "Password": "Password",
   "Profile": "Profile",
+  "Profile is not found": "Profile is not found",
   "Read more": "Read more",
   "Recommendations": "Recommendations",
   "Refresh page": "Refresh page",
@@ -55,5 +57,10 @@
   "safe": "safe",
   "show currency": "show currency",
   "sort by": "sort by",
-  "views": "views"
+  "views": "views",
+  "Отменить": "Отменить",
+  "Профиль": "Профиль",
+  "Профиль не найден": "Профиль не найден",
+  "Редактировать": "Редактировать",
+  "Сохранить": "Сохранить"
 }
