@@ -45,6 +45,7 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
   const dispatch = useAppDispatch();
   const validateErrors = useSelector(getProfileValidateErrors);
   const { id } = useParams<{ id: string }>();
+  
   const validateErrorTranslates = {
     [ValidateProfileErrors.SERVER_ERROR]: t('Server error'),
     [ValidateProfileErrors.INCORRECT_USER_COUNTRY]: t('Incorrect country'),

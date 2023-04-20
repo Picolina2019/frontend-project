@@ -1,5 +1,7 @@
 {
   "About page": "About page",
+  "Admin": "Admin",
+  "Admin page": "Admin page",
   "Age": "Age",
   "All articles": "All articles",
   "Articles not found": "Articles not found",
@@ -43,6 +45,7 @@
   "Some error happened": "Some error happened",
   "Something went wrong": "Something went wrong",
   "Wrong username or password": "Wrong username or password",
+  "You have no rights to visit this page": "You have no rights to visit this page",
   "Your name": "Your name",
   "Your surname": "Your surname",
   "abort": "abort",

@@ -1,5 +1,10 @@
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
-import { getUserAuthData, userActions } from 'entities/User';
+import {
+  getUserAuthData,
+  isUserAdmin,
+  isUserManager,
+  userActions,
+} from 'entities/User';
 import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,6 +26,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
+  const isAdmin = useSelector(isUserAdmin);
+  const isManager = useSelector(isUserManager);
 
   const [isAuthModal, setIsAuthModal] = useState(false);
   const closeModal = useCallback(() => {
@@ -32,6 +39,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const onLogout = useCallback(() => {
     dispatch(userActions.logout());
   }, [dispatch]);
+
+  const isAdminPanelAvailable = isAdmin || isManager;
 
   if (authData) {
     return (
@@ -49,6 +58,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           className={styles.dropdown}
           trigger={<Avatar size={30} src={authData.avatar} />}
           items={[
+            ...(isAdminPanelAvailable
+              ? [{ content: t('Admin'), href: RoutePath.admin_panel }]
+              : []),
+
             {
               content: t('Logout'),
               onClick: onLogout,

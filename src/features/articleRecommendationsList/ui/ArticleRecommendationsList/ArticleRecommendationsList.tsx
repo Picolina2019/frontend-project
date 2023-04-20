@@ -19,15 +19,15 @@ export const ArticleRecommendationsList = memo(
       error,
       data: articles,
     } = useArticleRecommendationsList(3);
-    console.log('!', articles);
+
     if (isLoading || error) {
       return null;
     }
     return (
-      <VStack gap='8' className={classNames('', {}, [className])}>
+      <VStack gap="8" className={classNames('', {}, [className])}>
         <Text size={TextSize.L} title={t('Recommendations')} />
-        {articles && <ArticleList articles={articles} target='_blank' />}
+        {articles && <ArticleList articles={articles} target="_blank" />}
       </VStack>
     );
-  }
+  },
 );
