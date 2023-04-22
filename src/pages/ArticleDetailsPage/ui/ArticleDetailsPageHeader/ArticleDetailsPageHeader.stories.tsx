@@ -2,18 +2,18 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import { ArticleInfiniteList } from './ArticleInfiniteList';
+import { ArticleDetailsPageHeader } from './ArticleDetailsPageHeader';
 
 export default {
-  title: 'pages/ArticlesPage/ArticleInfiniteList',
-  component: ArticleInfiniteList,
+  title: 'pages/ArticleDetailsPage/ArticleDetailsPageHeader',
+  component: ArticleDetailsPageHeader,
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} as ComponentMeta<typeof ArticleInfiniteList>;
+} as ComponentMeta<typeof ArticleDetailsPageHeader>;
 
-const Template: ComponentStory<typeof ArticleInfiniteList> = (args) => (
-  <ArticleInfiniteList {...args} />
+const Template: ComponentStory<typeof ArticleDetailsPageHeader> = (args) => (
+  <ArticleDetailsPageHeader {...args} />
 );
 
 export const Normal = Template.bind({});

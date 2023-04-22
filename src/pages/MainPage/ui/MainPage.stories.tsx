@@ -1,7 +1,8 @@
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import 'app/styles/index.scss';
+import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
+
+import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import MainPage from './MainPage';
 
@@ -11,15 +12,13 @@ export default {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
+  decorators: [StoreDecorator({})],
 } as ComponentMeta<typeof MainPage>;
 
-const Template: ComponentStory<typeof MainPage> = () => (
-  // eslint-disable-next-line react/jsx-props-no-spreading
-  <MainPage />
-);
+const Template: ComponentStory<typeof MainPage> = () => <MainPage />;
 
-export const Light = Template.bind({});
-Light.args = {};
+export const Normal = Template.bind({});
+Normal.args = {};
 
 export const Dark = Template.bind({});
 Dark.args = {};
