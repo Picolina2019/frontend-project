@@ -1,4 +1,38 @@
 {
+  "notifications": [
+    {
+      "id": "1",
+      "title": "Notification 1",
+      "description": "Some notification has accured",
+      "userId": "1"
+    },
+    {
+      "id": "2",
+      "title": "Notification 2",
+      "description": "Some notification has accured",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "3",
+      "title": "Notification 3",
+      "description": "Some notification has accured",
+      "userId": "1",
+      "href": "http://localhost:3000/admin"
+    },
+    {
+      "id": "4",
+      "title": "Notification 4",
+      "description": "Some notification has accured",
+      "userId": "1"
+    },
+    {
+      "id": "5",
+      "title": "Notification 1",
+      "description": "Some notification has accured",
+      "userId": "2"
+    }
+  ],
   "posts": [
     {
       "id": "1",
@@ -966,14 +1000,13 @@
       "roles": ["USER"],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
-      {
-        "id": "3",
-        "username": "manager",
-        "password": "443",
-        "roles": ["MANAGER"],
-        "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
-      }
-
+    {
+      "id": "3",
+      "username": "manager",
+      "password": "443",
+      "roles": ["MANAGER"],
+      "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
   ],
   "profile": [
     {
