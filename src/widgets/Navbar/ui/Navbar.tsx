@@ -26,8 +26,8 @@ export const Navbar = memo(({ className }: NavbarProps) => {
   const { t } = useTranslation();
   const authData = useSelector(getUserAuthData);
   const dispatch = useDispatch();
-
   const [isAuthModal, setIsAuthModal] = useState(false);
+
   const closeModal = useCallback(() => {
     setIsAuthModal(false);
   }, []);
