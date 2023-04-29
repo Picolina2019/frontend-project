@@ -23,13 +23,10 @@ import { AddCommentForm } from 'features/addCommentForm';
 // eslint-disable-next-line max-len
 import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { Page } from 'widgets/Page/Page';
-import {
-  articleDetailsPageRecommendationsReducer,
-  getArticleRecommendations,
-} from 'pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
-import { getArticleRecommendationsIsLoading } from 'pages/ArticleDetailsPage/model/selectors/recommendations';
-import { fetchArticleRecommendations } from 'pages/ArticleDetailsPage/model/services/fetchArticleRecommendations/fetchArticleRecommendations';
+import { articleDetailsPageRecommendationsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
+
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
+import ArticleRating from 'features/articleRating/ui/ArticleRating/ArticleRating';
 import styles from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
@@ -72,6 +69,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
       <Page className={classNames(styles.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id} />
+        <ArticleRating articleId={id} />
         <ArticleRecommendationsList />
         <Text className={styles.commentTitle} title={t('Comments')} />
         <AddCommentForm onSendComment={onSendComment} />

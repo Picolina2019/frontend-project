@@ -54,7 +54,9 @@
       "views": 102,
       "createdAt": "26.02.2012",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -120,7 +122,9 @@
       "views": 10,
       "createdAt": "26.02.2002",
       "userId": "2",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -186,7 +190,9 @@
       "views": 22,
       "createdAt": "26.02.2023",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -252,7 +258,9 @@
       "views": 10,
       "createdAt": "26.02.2000",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -318,7 +326,9 @@
       "views": 10223,
       "createdAt": "26.02.2010",
       "userId": "1",
-      "type": ["ALL"],
+      "type": [
+        "ALL"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -384,7 +394,9 @@
       "views": 100,
       "createdAt": "26.02.2019",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -450,7 +462,9 @@
       "views": 111,
       "createdAt": "26.02.2021",
       "userId": "1",
-      "type": ["ALL"],
+      "type": [
+        "ALL"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -516,7 +530,9 @@
       "views": 1033,
       "createdAt": "26.02.2013",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -582,7 +598,9 @@
       "views": 250,
       "createdAt": "26.02.2015",
       "userId": "1",
-      "type": ["ALL"],
+      "type": [
+        "ALL"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -648,7 +666,9 @@
       "views": 300,
       "createdAt": "26.02.2013",
       "userId": "1",
-      "type": ["ECONOMICS"],
+      "type": [
+        "ECONOMICS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -714,7 +734,9 @@
       "views": 1000,
       "createdAt": "26.02.1991",
       "userId": "1",
-      "type": ["ALL"],
+      "type": [
+        "ALL"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -780,7 +802,9 @@
       "views": 0,
       "createdAt": "26.02.2020",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -846,7 +870,9 @@
       "views": 22,
       "createdAt": "26.02.2022",
       "userId": "1",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -990,21 +1016,27 @@
       "id": "1",
       "username": "admin",
       "password": "123",
-      "roles": ["ADMIN"],
+      "roles": [
+        "ADMIN"
+      ],
       "avatar": "https://dl.memuplay.com/new_market/img/com.vicman.newprofilepic.icon.2022-06-07-21-33-07.png"
     },
     {
       "id": "2",
       "username": "user",
       "password": "123",
-      "roles": ["USER"],
+      "roles": [
+        "USER"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     },
     {
       "id": "3",
       "username": "manager",
       "password": "443",
-      "roles": ["MANAGER"],
+      "roles": [
+        "MANAGER"
+      ],
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
     }
   ],
@@ -1030,6 +1062,93 @@
       "city": "Stockholm",
       "username": "user",
       "avatar": "https://xakep.ru/wp-content/uploads/2018/05/171485/KuroiSH-hacker.jpg"
+    }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Nice article",
+      "userId": "1",
+      "articleId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Nice article",
+      "userId": "1",
+      "articleId": "2"
+    },
+    {
+      "userId": "1",
+      "articleId": "3",
+      "rate": 3,
+      "feedback": "",
+      "id": "I7ofk1u"
+    },
+    {
+      "userId": "1",
+      "articleId": "9",
+      "rate": 5,
+      "feedback": "asdasdasdasd",
+      "id": "Y7MhPzo"
+    },
+    {
+      "userId": "1",
+      "articleId": "10",
+      "rate": 1,
+      "feedback": "bad",
+      "id": "II0a75O"
+    },
+    {
+      "userId": "1",
+      "articleId": "7",
+      "rate": 3,
+      "feedback": "",
+      "id": "bcPnbbZ"
+    },
+    {
+      "userId": "1",
+      "articleId": "12",
+      "rate": 4,
+      "id": "me8C9t0"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "feedback": "Nice!",
+      "id": "CssXyvU"
+    },
+    {
+      "userId": "1",
+      "articleId": "11",
+      "rate": 4,
+      "feedback": "Nice!",
+      "id": "oJdDqG7"
+    },
+    {
+      "userId": "1",
+      "articleId": "4",
+      "rate": 2,
+      "feedback": "",
+      "id": "cDrK7Jp"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "rate": 4,
+      "feedback": "Nice article",
+      "userId": "1",
+      "profileId": "1"
+    },
+    {
+      "id": "2",
+      "rate": 4,
+      "feedback": "Nice article",
+      "userId": "1",
+      "profileId": "2"
     }
   ]
 }
