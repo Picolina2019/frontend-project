@@ -7,7 +7,6 @@ import { NotificationList } from 'entities/Notification';
 import { Popover } from 'shared/ui/Popups';
 import { Drawer } from 'shared/ui/Drawer/Drawer';
 import { useDevice } from 'shared/lib/hooks/useDevice/useDevice';
-import { AnimationProvider } from 'shared/lib/components/AnimationProvider';
 import styles from './NotificationButton.module.scss';
 
 interface NotificationButtonProps {
@@ -36,7 +35,7 @@ export const NotificationButton = memo((props: NotificationButtonProps) => {
   return !isMobile ? (
     <Popover
       className={classNames(styles.NotificationButton, {}, [className])}
-      direction='bottom left'
+      direction="bottom left"
       trigger={trigger}>
       <NotificationList className={styles.notifications} />
     </Popover>

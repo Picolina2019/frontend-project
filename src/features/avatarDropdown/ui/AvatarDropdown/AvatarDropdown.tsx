@@ -36,7 +36,7 @@ export const AvatarDropdown = memo((props: AvatarDropdownProps) => {
 
   return (
     <Dropdown
-      direction='bottom left'
+      direction="bottom left"
       className={classNames('', {}, [className])}
       items={[
         ...(isAdminPanelAvailable

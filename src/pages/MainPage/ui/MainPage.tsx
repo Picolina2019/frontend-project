@@ -17,7 +17,7 @@ const MainPage = memo(() => {
       <Input
         autoFocus
         // eslint-disable-next-line i18next/no-literal-string
-        placeholder='Enter message'
+        placeholder="Enter message"
         onChange={valueOnChange}
         value={value}
       />

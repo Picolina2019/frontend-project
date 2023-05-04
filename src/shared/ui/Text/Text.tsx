@@ -53,5 +53,5 @@ export const Text = memo(
         {text && <p className={styles.text}>{text}</p>}
       </div>
     );
-  }
+  },
 );

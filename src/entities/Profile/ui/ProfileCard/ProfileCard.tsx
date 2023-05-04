@@ -47,7 +47,7 @@ export const ProfileCard = ({
   if (isLoading) {
     return (
       <HStack
-        justify='center'
+        justify="center"
         className={classNames(styles.ProfileCard, { [styles.loading]: true }, [
           className,
         ])}>
@@ -58,7 +58,7 @@ export const ProfileCard = ({
   if (error) {
     return (
       <HStack
-        justify='center'
+        justify="center"
         className={classNames(styles.ProfileCard, { [styles.loading]: true }, [
           className,
         ])}>
@@ -71,13 +71,13 @@ export const ProfileCard = ({
   };
   return (
     <VStack
-      gap='8'
+      gap="8"
       max
       className={classNames(styles.ProfileCard, mods, [className])}>
       <div className={styles.data}>
         {data?.avatar && (
-          <HStack justify='center' className={styles.avatarWrapper}>
-            <Avatar src={data?.avatar} alt='Profile' />
+          <HStack justify="center" className={styles.avatarWrapper}>
+            <Avatar src={data?.avatar} alt="Profile" />
           </HStack>
         )}
 

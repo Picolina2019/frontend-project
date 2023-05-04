@@ -1,7 +1,5 @@
 import {
   getUserAuthData,
-  isUserAdmin,
-  isUserManager,
   userActions,
 } from 'entities/User';
 import React, { memo, useCallback, useState } from 'react';
@@ -49,7 +47,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
           {t('Create article')}
         </AppLink>
-        <HStack gap='16' className={styles.actions}>
+        <HStack gap="16" className={styles.actions}>
           <NotificationButton />
           <AvatarDropdown />
         </HStack>

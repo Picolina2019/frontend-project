@@ -37,7 +37,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
   }, [dispatch]);
 
   return (
-    <HStack max justify='between' className={classNames('', {}, [className])}>
+    <HStack max justify="between" className={classNames('', {}, [className])}>
       <Text title={t('Profile')} />
       {canEdit && (
         <div>
@@ -46,7 +46,7 @@ export const ProfilePageHeader = ({ className }: ProfilePageHeaderProps) => {
               {t('edit')}
             </Button>
           ) : (
-            <HStack gap='8'>
+            <HStack gap="8">
               <Button onClick={onCancelEdit} theme={ButtonTheme.OUTLINE_RED}>
                 {t('abort')}
               </Button>

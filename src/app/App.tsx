@@ -1,6 +1,6 @@
 import { Navbar } from 'widgets/Navbar';
 import { Sidebar } from 'widgets/Sidebar';
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserMounted, userActions } from 'entities/User';
@@ -22,7 +22,7 @@ export const App = () => {
     <div className={classNames('app', {}, [theme])}>
       <Suspense fallback={<PageLoader />}>
         <Navbar />
-        <div className='contentPage'>
+        <div className="contentPage">
           <Sidebar />
           {mounted && <AppRouter />}
         </div>

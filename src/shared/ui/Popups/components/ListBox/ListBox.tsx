@@ -1,6 +1,6 @@
-import { Fragment, ReactNode, useState } from 'react';
+import { Fragment, ReactNode } from 'react';
 import { Listbox as HListBox } from '@headlessui/react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
+import { classNames } from 'shared/lib/classNames/classNames';
 import { DropdownDirection } from 'shared/types/ui';
 import { HStack } from '../../../Stack';
 import { Button } from '../../../Button/Button';
@@ -40,11 +40,11 @@ export function ListBox(props: ListBoxProps) {
   const optionsClasses = [mapDirectionClass[direction]];
 
   return (
-    <HStack gap='8'>
+    <HStack gap="8">
       {label && <span>{`${label}>`}</span>}
       <HListBox
         disabled={readonly}
-        as='div'
+        as="div"
         className={classNames(styles.ListBox, {}, [
           className,
           PopupClass.popup,

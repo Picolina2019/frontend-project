@@ -1,6 +1,5 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { Select } from 'shared/ui/Select/Select';
 import { memo, useCallback } from 'react';
 import { ListBox } from 'shared/ui/Popups/components/ListBox/ListBox';
 import { Currency } from '../../model/types/currency';
@@ -26,7 +25,7 @@ export const CurrencySelect = memo(
       (value: string) => {
         onChange?.(value as Currency);
       },
-      [onChange]
+      [onChange],
     );
 
     return (
@@ -38,8 +37,8 @@ export const CurrencySelect = memo(
         value={value}
         onChange={onChangeHandler}
         readonly={readonly}
-        direction='top right'
+        direction="top right"
       />
     );
-  }
+  },
 );

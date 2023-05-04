@@ -30,7 +30,7 @@ export const ArticleDetailsComments = memo(
       (text: string) => {
         dispatch(addCommentForArticle(text));
       },
-      [dispatch]
+      [dispatch],
     );
 
     useInitialEffect(() => {
@@ -38,7 +38,7 @@ export const ArticleDetailsComments = memo(
     });
 
     return (
-      <VStack gap='16' className={classNames('', {}, [className])}>
+      <VStack gap="16" className={classNames('', {}, [className])}>
         <Text size={TextSize.L} title={t('Comments')} />
         <Suspense fallback={t('loading')}>
           <AddCommentForm onSendComment={onSendComment} />
@@ -46,5 +46,5 @@ export const ArticleDetailsComments = memo(
         <CommentList isLoading={commentsIsLoading} comments={comments} />
       </VStack>
     );
-  }
+  },
 );

@@ -18,7 +18,13 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', '@typescript-eslint', 'i18next', 'react-hooks'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'i18next',
+    'react-hooks',
+    'unused-imports',
+  ],
   rules: {
     'react/jsx-filename-extension': [
       2,
@@ -26,6 +32,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.tsx'],
       },
     ],
+    'unused-imports/no-unused-imports': 'error',
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
     'no-unused-vars': 'off',

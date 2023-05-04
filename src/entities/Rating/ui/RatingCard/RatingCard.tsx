@@ -47,7 +47,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         onAccept?.(selectedStarsCount);
       }
     },
-    [hasFeedback, onAccept]
+    [hasFeedback, onAccept],
   );
 
   const acceptHandle = useCallback(() => {
@@ -73,7 +73,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
 
   return (
     <Card className={classNames('', {}, [className])}>
-      <VStack align='center' gap='8'>
+      <VStack align="center" gap="8">
         <Text title={title} />
         <StarRating
           selectedStars={starsCount}
@@ -83,9 +83,9 @@ export const RatingCard = memo((props: RatingCardProps) => {
       </VStack>
       {!isMobile ? (
         <Modal isOpen={isModalOpen} lazy>
-          <VStack max gap='32'>
+          <VStack max gap="32">
             {modalContent}
-            <HStack max gap='16' justify='end'>
+            <HStack max gap="16" justify="end">
               <Button onClick={cancelHandle} theme={ButtonTheme.OUTLINE_RED}>
                 {t('Close')}
               </Button>
@@ -95,7 +95,7 @@ export const RatingCard = memo((props: RatingCardProps) => {
         </Modal>
       ) : (
         <Drawer isOpen={isModalOpen} lazy onClose={cancelHandle}>
-          <VStack gap='32'>
+          <VStack gap="32">
             {modalContent}
             <Button fullWidth onClick={acceptHandle} size={ButtonSize.L}>
               {t('Send')}

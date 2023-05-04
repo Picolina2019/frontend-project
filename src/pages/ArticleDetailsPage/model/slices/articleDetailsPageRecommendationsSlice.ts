@@ -1,16 +1,12 @@
 import {
   createEntityAdapter,
   createSlice,
-  PayloadAction,
 } from '@reduxjs/toolkit';
 
-import { Comment } from 'entities/Comment';
 import { StateSchema } from 'app/providers/StoreProvider';
 
 // eslint-disable-next-line max-len
-import { fetchCommentsByArticleId } from 'pages/ArticleDetailsPage/model/services/fetchCommentsByArticleId/fetchCommentsByArticleId';
 import { Article } from 'entities/Article';
-import { ArticleDetailsCommentsSchema } from '../types/ArticleDetailsCommentsSchema';
 import { ArticleDetailsRecommendationsSchema } from '../types/ArticleDetailsRecommendationsSchema';
 import { fetchArticleRecommendations } from '../services/fetchArticleRecommendations/fetchArticleRecommendations';
 
@@ -18,12 +14,10 @@ const recommendationsAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
 });
 
-export const getArticleRecommendations =
-  recommendationsAdapter.getSelectors<StateSchema>(
-    (state) =>
-      state.articleDetailsRecommendations ||
-      recommendationsAdapter.getInitialState()
-  );
+export const getArticleRecommendations = recommendationsAdapter.getSelectors<StateSchema>(
+  (state) => state.articleDetailsRecommendations
+      || recommendationsAdapter.getInitialState(),
+);
 
 const articleDetailsPageRecommendationsSlice = createSlice({
   name: 'articleDetailsPageRecommendationsSlice',
@@ -34,7 +28,7 @@ const articleDetailsPageRecommendationsSlice = createSlice({
         error: undefined,
         ids: [],
         entities: {},
-      }
+      },
     ),
   reducers: {},
   extraReducers: (builder) => {
@@ -54,5 +48,4 @@ const articleDetailsPageRecommendationsSlice = createSlice({
   },
 });
 
-export const { reducer: articleDetailsPageRecommendationsReducer } =
-  articleDetailsPageRecommendationsSlice;
+export const { reducer: articleDetailsPageRecommendationsReducer } = articleDetailsPageRecommendationsSlice;

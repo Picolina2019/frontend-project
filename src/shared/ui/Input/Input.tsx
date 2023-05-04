@@ -63,19 +63,19 @@ export const Input = memo(
           <div className={styles.placeholder}>{`${placeholder}>`}</div>
         )}
         <input
-            ref={inputReference}
-            className={styles.input}
-            type={type}
-            value={value}
-            onChange={onChangeHandler}
-            onBlur={onBlur}
-            onFocus={onFocus}
-            readOnly={readonly}
+          ref={inputReference}
+          className={styles.input}
+          type={type}
+          value={value}
+          onChange={onChangeHandler}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          readOnly={readonly}
           // eslint-disable-next-line jsx-a11y/no-autofocus
-            autoFocus={isFocused}
-            {...otherProps}
+          autoFocus={isFocused}
+          {...otherProps}
         />
       </div>
     );
-  }
+  },
 );
