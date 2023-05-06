@@ -1,11 +1,8 @@
-import {
-  getUserAuthData,
-  userActions,
-} from 'entities/User';
+import { getUserAuthData, userActions } from 'entities/User';
 import React, { memo, useCallback, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { getRouteArticleCreate } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
@@ -44,10 +41,10 @@ export const Navbar = memo(({ className }: NavbarProps) => {
           className={styles.appName}
           title={t('Frontend app')}
         />
-        <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create}>
+        <AppLink theme={AppLinkTheme.SECONDARY} to={getRouteArticleCreate()}>
           {t('Create article')}
         </AppLink>
-        <HStack gap="16" className={styles.actions}>
+        <HStack gap='16' className={styles.actions}>
           <NotificationButton />
           <AvatarDropdown />
         </HStack>

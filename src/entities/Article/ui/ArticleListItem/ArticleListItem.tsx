@@ -6,7 +6,7 @@ import { Icon } from 'shared/ui/Icon/Icon';
 import EyeIcon from 'shared/assets/icons/eye-20-20.svg';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { getRouteArticleDetails } from 'shared/config/routeConfig/routeConfig';
 import { Card } from 'shared/ui/Card/Card';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
 import styles from './ArticleListItem.module.scss';
@@ -41,7 +41,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
 
   if (view === ArticleView.BIG) {
     const textBlock = article.blocks.find(
-      (block) => block.type === ArticleBlockType.TEXT,
+      (block) => block.type === ArticleBlockType.TEXT
     ) as ArticleTextBlock;
 
     return (
@@ -67,9 +67,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           )}
 
           <div className={styles.footer}>
-            <AppLink
-              target={target}
-              to={RoutePath.article_details + article.id}>
+            <AppLink target={target} to={getRouteArticleDetails(article.id)}>
               <Button theme={ButtonTheme.OUTLINE}>{t('Read more')}</Button>
             </AppLink>
             {views}
@@ -82,7 +80,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
   return (
     <AppLink
       target={target}
-      to={RoutePath.article_details + article.id}
+      to={getRouteArticleDetails(article.id)}
       className={classNames(styles.ArticleListItem, {}, [
         className,
         styles[view],

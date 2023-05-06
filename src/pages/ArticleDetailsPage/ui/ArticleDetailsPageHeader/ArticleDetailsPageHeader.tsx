@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { useCallback } from 'react';
-import { RoutePath } from 'shared/config/routeConfig/routeConfig';
+import { getRouteArticleEdit, getRouteArticles } from 'shared/config/routeConfig/routeConfig';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { getUserAuthData } from 'entities/User';
@@ -24,11 +24,13 @@ export const ArticleDetailsPageHeader = ({
   const canEdit = useSelector(getCanEditArticle);
 
   const onBackToList = useCallback(() => {
-    navigate(RoutePath.articles);
+    navigate(getRouteArticles());
   }, [navigate]);
   const onEditArticle = useCallback(() => {
-    navigate(`${RoutePath.article_details}${article?.id}/edit`);
-  }, [article?.id, navigate]);
+    if (article) {
+      navigate(getRouteArticleEdit(article.id));
+    }
+  }, [article, navigate]);
 
   return (
     <div
