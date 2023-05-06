@@ -2,18 +2,15 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { memo, useCallback } from 'react';
-import { ArticleDetails, ArticleList } from 'entities/Article';
-import { useNavigate, useParams } from 'react-router-dom';
-import { Text, TextSize } from 'shared/ui/Text/Text';
+import { ArticleDetails } from 'entities/Article';
+import { useParams } from 'react-router-dom';
+import { Text } from 'shared/ui/Text/Text';
 import { CommentList } from 'entities/Comment';
 import {
   DynamicModuleLoader,
   ReducersList,
 } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import {
-  articleDetailsCommentsReducer,
-  getArticleComments,
-} from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
+import { getArticleComments } from 'pages/ArticleDetailsPage/model/slices/articleDetailsCommentsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { getArticleCommentsIsLoading } from 'pages/ArticleDetailsPage/model/selectors/comments';
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect';
@@ -23,10 +20,10 @@ import { AddCommentForm } from 'features/addCommentForm';
 // eslint-disable-next-line max-len
 import { addCommentForArticle } from 'pages/ArticleDetailsPage/model/services/addCommentForArticle/addCommentForArticle';
 import { Page } from 'widgets/Page/Page';
-import { articleDetailsPageRecommendationsReducer } from 'pages/ArticleDetailsPage/model/slices/articleDetailsPageRecommendationsSlice';
 
 import { ArticleRecommendationsList } from 'features/articleRecommendationsList';
 import ArticleRating from 'features/articleRating/ui/ArticleRating/ArticleRating';
+import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slices';
 import styles from './ArticleDetailsPage.module.scss';
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader';
 
@@ -34,8 +31,7 @@ interface ArticleDetailsPageProps {
   className?: string;
 }
 const reducer: ReducersList = {
-  articleDetailsComments: articleDetailsCommentsReducer,
-  articleDetailsRecommendations: articleDetailsPageRecommendationsReducer,
+  articleDetailsPage: articleDetailsPageReducer,
 };
 
 const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
