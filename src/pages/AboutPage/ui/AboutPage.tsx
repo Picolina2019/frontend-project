@@ -7,10 +7,14 @@ const AboutPage = memo(() => {
   const { t } = useTranslation();
 
   return (
-    <Page>
+    <Page data-testid='AboutPage'>
       {t('About page')}
 
-      <RatingCard hasFeedback title={t('your opinion')} feedbackTitle={t('Leave your opinion')} />
+      <RatingCard
+        hasFeedback
+        title={t('your opinion')}
+        feedbackTitle={t('Leave your opinion')}
+      />
     </Page>
   );
 });

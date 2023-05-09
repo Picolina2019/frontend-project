@@ -9,9 +9,10 @@ import { useSelector } from 'react-redux';
 import { StateSchema } from 'app/providers/StoreProvider';
 // import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
 import { useThrottle } from 'shared/lib/hooks/useThrottle/useThrottle';
+import { TestProps } from 'shared/types/tests';
 import styles from './Page.module.scss';
 
-interface PageProps {
+interface PageProps extends TestProps {
   className?: string;
   children: ReactNode;
   onScrollEnd?: () => void;
@@ -23,7 +24,9 @@ export const Page = memo((props: PageProps) => {
   const triggerRef = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
   const { pathname } = useLocation();
-  const scrollPosition = useSelector((state: StateSchema) => getUIScrollByPath(state, pathname));
+  const scrollPosition = useSelector((state: StateSchema) =>
+    getUIScrollByPath(state, pathname)
+  );
 
   useInfiniteScroll({
     triggerRef,
@@ -40,7 +43,7 @@ export const Page = memo((props: PageProps) => {
       uiActions.setScrollPosition({
         position: e.currentTarget.scrollTop,
         path: pathname,
-      }),
+      })
     );
   }, 500);
 
@@ -48,7 +51,8 @@ export const Page = memo((props: PageProps) => {
     <section
       ref={wrapperRef}
       className={classNames(styles.Page, {}, [className])}
-      onScroll={onScroll}>
+      onScroll={onScroll}
+      data-testid={props['data-testid'] ?? 'Page'}>
       {children}
       {onScrollEnd ? <div className={styles.trigger} ref={triggerRef} /> : null}
     </section>

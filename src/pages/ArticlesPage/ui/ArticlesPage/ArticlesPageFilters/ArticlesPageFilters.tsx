@@ -10,7 +10,7 @@ import { useSelector } from 'react-redux';
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch';
 import { Card } from 'shared/ui/Card/Card';
 import { Input } from 'shared/ui/Input/Input';
-import { SortOrder } from 'shared/types';
+
 
 import {
   ArticleSortField,
@@ -29,6 +29,7 @@ import {
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
 import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce';
 import { ArticleTypeTabs } from 'entities/Article/ui/ArticleTypeTabs/ArticleTypeTabs';
+import { SortOrder } from 'shared/types/sort';
 import styles from './ArticlesPageFilters.module.scss';
 
 interface ArticlesPageFiltersProps {
@@ -55,7 +56,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
     (view: ArticleView) => {
       dispatch(articlesPageActions.setView(view));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeSort = useCallback(
@@ -64,7 +65,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
       dispatch(articlesPageActions.setPage(1));
       fetchData();
     },
-    [dispatch, fetchData],
+    [dispatch, fetchData]
   );
 
   const onChangeOrder = useCallback(
@@ -73,7 +74,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
       dispatch(articlesPageActions.setPage(1));
       fetchData();
     },
-    [dispatch, fetchData],
+    [dispatch, fetchData]
   );
 
   const onChangeSearch = useCallback(
@@ -83,7 +84,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
 
       debouncedFetchData();
     },
-    [dispatch, debouncedFetchData],
+    [dispatch, debouncedFetchData]
   );
 
   const onChangeType = useCallback(
@@ -92,7 +93,7 @@ export const ArticlesPageFilters = memo((props: ArticlesPageFiltersProps) => {
       dispatch(articlesPageActions.setPage(1));
       fetchData();
     },
-    [dispatch, fetchData],
+    [dispatch, fetchData]
   );
 
   return (

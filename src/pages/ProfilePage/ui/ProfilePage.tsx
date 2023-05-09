@@ -62,20 +62,20 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
     (value?: string) => {
       dispatch(profileActions.updateProfile({ first: value || '' }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeLastname = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ lastname: value || '' }));
     },
-    [dispatch],
+    [dispatch]
   );
   const onChangeCity = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ city: value || '' }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeAge = useCallback(
@@ -83,48 +83,50 @@ const ProfilePage = memo(({ className }: ProfilePageProps) => {
       dispatch(
         profileActions.updateProfile({
           age: Number(value?.replace(/\D/gi, '') || 0),
-        }),
+        })
       );
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeUsername = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ username: value || '' }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeAvatar = useCallback(
     (value?: string) => {
       dispatch(profileActions.updateProfile({ avatar: value || '' }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeCurrency = useCallback(
     (currency: Currency) => {
       dispatch(profileActions.updateProfile({ currency }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   const onChangeCountry = useCallback(
     (country: Country) => {
       dispatch(profileActions.updateProfile({ country }));
     },
-    [dispatch],
+    [dispatch]
   );
 
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
-      <Page className={classNames('', {}, [className])}>
-        <VStack gap="16" max>
+      <Page
+        data-testid='ProfilePage'
+        className={classNames('', {}, [className])}>
+        <VStack gap='16' max>
           <ProfilePageHeader />
 
-          {validateErrors?.length
-            && validateErrors?.map((err) => (
+          {validateErrors?.length &&
+            validateErrors?.map((err) => (
               <Text
                 key={err}
                 theme={TextTheme.ERROR}

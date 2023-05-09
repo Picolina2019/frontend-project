@@ -9,6 +9,8 @@ import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { getRouteArticleDetails } from 'shared/config/routeConfig/routeConfig';
 import { Card } from 'shared/ui/Card/Card';
 import { AppLink } from 'shared/ui/AppLink/AppLink';
+import { AppImage } from 'shared/ui/AppImage';
+import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import styles from './ArticleListItem.module.scss';
 import {
   Article,
@@ -58,7 +60,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
           </div>
           <Text title={article.title} className={styles.title} />
           {types}
-          <img src={article.img} className={styles.img} alt={article.title} />
+          <AppImage
+            fallback={<Skeleton width='100%' height={250} />}
+            src={article.img}
+            className={styles.img}
+            alt={article.title}
+          />
           {textBlock && (
             <ArticleTextBlockComponent
               block={textBlock}
@@ -87,7 +94,12 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
       ])}>
       <Card className={styles.card}>
         <div className={styles.imageWrapper}>
-          <img alt={article.title} src={article.img} className={styles.img} />
+          <AppImage
+            fallback={<Skeleton width={200} height={250} />}
+            alt={article.title}
+            src={article.img}
+            className={styles.img}
+          />
           <Text text={article.createdAt} className={styles.date} />
         </div>
         <div className={styles.infoWrapper}>

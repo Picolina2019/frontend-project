@@ -12,7 +12,7 @@ const MainPage = memo(() => {
     setValue(val);
   };
   return (
-    <Page>
+    <Page data-testid="MainPage">
       {t('main page')}
 
       <Input
