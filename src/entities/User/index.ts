@@ -10,3 +10,4 @@ export {
 } from './model/selectors/roleSelectors';
 export { useJsonSettings } from '../../../../../Desktop/frontend-project/src/entities/User/model/selectors/jsonSettings';
 export { saveJsonSettings } from './model/services/saveJsonSettings';
+export { initAuthData } from './model/services/initAuthData';
